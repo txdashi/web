@@ -1,0 +1,39 @@
+<html></html>
+    <head>
+        <title>CSS AMOR DANIEL</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="heart" id="heart"></div>
+        <h1 id="mainText">Para mi niña ❤</h1>
+        <div id="bottomText" class="text hidden">
+            <p>Hola Majito, hoy es viernes 13 y espero que así como hoy, todos los viernes 13 te acuerdes de mí, como una maldición jojo. Quería verte hoy y llenarte de besitos, pero creo que no se podrá, porque se que estarás muy ocupada hoy con tu trabajo y con las cosas que tienes que hacer en tu casa. Aún así, hice esto para que sepas que eres especial para mí, eres una chica que, a pesar de lo bueno y lo malo que estamos pasando en tan poco tiempo, siempre sabe como sacarme una sonrisa y alegrarme el día. Sabes que podremos tener altos y bajos en esto que tenemos, pero sea como sea quiero poder superarlo todo contigo. Eres una chica extraordinaria, aunque tú no lo creas, si te vieras como yo te veo, sabrías porque estoy tan pero tan loco por tí. Realmente no descarto la posibilidad de tener todo lo bueno y lindo contigo, así como dijimos. Me alegro de que hayas vuelto a mi vida, la verdad es que no me lo esperaba para nada, pero pues supongo que las cosas pasan por algo y espero que esta sea nuestra oportunidad de ser felices. Te quiero muchísimo, siempre te lo digo y espero que nunca lo olvides. De verdad, no sabes lo mucho que vales para mí, que te quede claro. Y pues, pase lo que pase, siempre tendrás mi apoyo y tendrás a alguien que te escuche y que, a pesar de todo, estará para tí. Te adoro, mi niña.</p>
+        </div>
+        <button id="changeButton">Haz clic aquí</button>
+
+        <!-- Aquí va el video de YouTube -->
+        <div id="videoContainer" class="hidden">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ubq19HWOYo4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            document.getElementById('changeButton').addEventListener('click', function() {
+                // Reducir el corazón
+                const heart = document.getElementById('heart');
+                heart.style.transform = 'scale(0.5) rotate(-45deg)';
+                
+                // Mostrar el texto de abajo
+                document.getElementById('bottomText').classList.remove('hidden');
+                
+                // Esconder el texto principal
+                document.getElementById('mainText').classList.add('hidden');
+                
+                // Esconder el botón
+                document.getElementById('changeButton').style.display = 'none';
+                
+                // Mostrar el video
+                document.getElementById('videoContainer').classList.remove('hidden');
+            });
+        </script>
+    </body>
+</html>
